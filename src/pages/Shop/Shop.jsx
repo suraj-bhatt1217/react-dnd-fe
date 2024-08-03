@@ -1,3 +1,4 @@
+import InventoryList from "../../components/InventoryList/InventoryList"
 import { inventoryData } from "../../data/data"
 
 const Shop = () => {
@@ -6,12 +7,7 @@ const Shop = () => {
         <main>
             <h1>Shop</h1>
             <ul>
-                {inventoryData.map(item => 
-                    <li key={item._id}>
-                        <p> {item.name} </p>
-                        <p> Cost: {item.cost} </p>
-                    </li>
-                )}
+               <InventoryList inventory = {inventoryData} />
             </ul>
         </main>
     )
