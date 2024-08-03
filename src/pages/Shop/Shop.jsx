@@ -8,13 +8,17 @@ import InventoryList from "../../components/InventoryList/InventoryList"
 import { inventoryData } from "../../data/data"
  
 const Shop = () => {
-    
     const [inventory, setInventory] = useState(inventoryData)
-    console.log('Inventory Data:', inventoryData)
+
+    const handleAddItem = () => { 
+        setInventory([{ _id: 26, name: "Alienware", cost: 25, weight: 20 },
+            ...inventory])
+    }
 
     return (
         <main>
             <h1>Shop</h1>
+            <button onClick={handleAddItem}>Click here</button>
             <ul>
                <InventoryList inventory = {inventory} />
             </ul>
@@ -22,5 +26,4 @@ const Shop = () => {
     )
 }
  
-export default Shop
-   
+export default Shop 
