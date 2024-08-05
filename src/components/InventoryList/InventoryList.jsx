@@ -1,16 +1,18 @@
+import './InventoryList.css'
+
 const InventoryList = (props) => {
-    return ( <div>
-        <h2>
+    return ( <div className="inventory-list">
+        <h2 className="inventory-title">
             Inventory List
         </h2>
-        <ul>
+        <ul className="inventory-items">
             {props.inventory.map(item => 
-                    <li key={item._id}>
-                        <p> {item.name} </p>
-                        <p> Cost: {item.cost} </p>
+                    <li key={item._id} className="inventory-item">
+                        <p className="item-name"> {item.name} </p>
+                        <p className="item-cost"> Cost: {item.cost} </p>
                         {props.handleAddItem 
-                        ? <button onClick={()=> props.handleAddItem(item)}>Add Item</button> 
-                        : <button onClick={() => props.handleRemoveItem(item)}>Remove Item</button> }
+                        ? <button className="item-button add-button" onClick={()=> props.handleAddItem(item)}>Add Item</button> 
+                        : <button className="item-button remove-button" onClick={() => props.handleRemoveItem(item)}>Remove Item</button> }
                     </li>
                 )}
         </ul>
