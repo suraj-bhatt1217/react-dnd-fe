@@ -6,21 +6,38 @@ import InventoryList from "../../components/InventoryList/InventoryList"
 
 // data
 import { inventoryData } from "../../data/data"
+
+//css
+import './Shop.css'
  
 const Shop = () => {
-    const [inventory, setInventory] = useState(inventoryData)
+    const [shopInventory, setShopInventory] = useState(inventoryData)
+    const [userInventory, setUserInventory] = useState([])
 
-    const handleAddItem = () => { 
-        setInventory([{ _id: 26, name: "Alienware", cost: 25, weight: 20 },
-            ...inventory])
+    const handleAddItem = (item) => { 
+        setUserInventory([item, ...userInventory])
+        setShopInventory(shopInventory.filter((el) => el._id != item._id ))
+    }
+
+    const handleRemoveItem = (item) => {
+        setShopInventory([...shopInventory, item])
+        setUserInventory(userInventory.filter((el) => el._id !== item._id))
     }
 
     return (
         <main>
-            <h1>Shop</h1>
-            <button onClick={handleAddItem}>Click here</button>
+            <h1>Shop</h1>       
             <ul>
-               <InventoryList inventory = {inventory} />
+            <section className="shop-section">
+               <InventoryList 
+                inventory = {shopInventory} 
+                handleAddItem = {handleAddItem}
+               />
+               <InventoryList 
+                inventory = {userInventory}
+                handleRemoveItem = {handleRemoveItem} 
+               />
+            </section>
             </ul>
         </main>
     )
