@@ -39,7 +39,7 @@ const MonsterDetails = () => {
                 <p>Size: {monsterDetails.size}</p>
                 <p>Armor Class: {monsterDetails.armorClass?.[0]?.value}</p>
                 <p>Hit Points: {monsterDetails.hitPoints}</p>
-                <p>Speed: {monsterDetails.speed?.map((s, i) => 
+                <p>Speed: {monsterDetails.speed?.map((s) => 
                     Object.entries(s).map(([key, value]) => `${key}: ${value}`).join(', ')
                 ).join(', ')}</p>
                 <p>Actions: {monsterDetails.actions?.map(action => action.name).join(', ')}</p>
