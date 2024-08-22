@@ -10,6 +10,7 @@ import { getSpells } from "../../services/api-calls"
 const SpellSearch = () => {
 
     const [allSpells, setAllSpells] = useState([])
+    const [searchResults, setSearchResults] = useState([])
 
     useEffect(()=>{
         const fetchSpellList = async () => {
@@ -17,12 +18,24 @@ const SpellSearch = () => {
             setAllSpells(spellData)
         }
         fetchSpellList()
-    },[])
+    }, [])
+
+    const handleSpellSearch = (formData) => {
+        const filteredSpellResults = allSpells.filter(spell => 
+            spell.name.toLowerCase().includes(formData.query.toLowerCase())
+        )
+        setSearchResults(filteredSpellResults)
+    }
 
     return (  
         <main className="spell-list">
             <h1>Spells</h1>
-            <SearchForm/>
+            <SearchForm handleSpellSearch={handleSpellSearch} />
+            {searchResults.map(spell => 
+                <div key={spell._id} className="link-container">
+                    {spell.name}
+                </div>
+            )}
         </main>
       )
 }

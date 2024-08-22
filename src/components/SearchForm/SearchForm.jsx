@@ -1,16 +1,22 @@
 // npm modules
-import { useState, useEffect } from "react"
+import { useState} from "react"
 
 
-const SearchForm = () => {
+const SearchForm = (props) => {
 
     const [formData, setFormData] = useState({query:''})
 
     const handleChange = (evt) => {
         setFormData({...formData ,[evt.target.name]: evt.target.value})
     }
+
+    const handleSubmit = evt => {
+        evt.preventDefault()
+        props.handleSpellSearch(formData)
+        setFormData({...formData, query: ''})
+    }
     return ( 
-        <form className='search-form' action="">
+        <form onSubmit = {handleSubmit} className='search-form' action="">
             <input 
             type="text" 
             name="query"
