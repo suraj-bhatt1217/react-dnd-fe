@@ -5,6 +5,11 @@ export const getMonsterList = async () => {
     return res.json()
 }
 
+export const getMonster = async (monsterId) => {
+    const res = await fetch(`${baseUrl}/api/monsters/${monsterId}`)
+    return res.json()
+}
+
 // export {
 //     getMonsterList
 // }
