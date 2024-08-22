@@ -15,7 +15,11 @@ export const getSpells = async () => {
     return res.json()
 }
 
+export const getSpell = async (spellId) => {
+    const res = await fetch(`${baseUrl}/api/spells/${spellId}`)
+    return res.json()
+}
 // export {
-//     getMonsterList
+    //     getMonsterList
 // }
 

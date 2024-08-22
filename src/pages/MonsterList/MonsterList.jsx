@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 
 import { getMonsterList } from "../../services/api-calls"
 
+import './MonsterList.css'
+
 const MonsterList = () => {
     const [monsterList, setMonsterList] = useState([])
 

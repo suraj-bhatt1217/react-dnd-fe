@@ -1,11 +1,14 @@
 // npm modules
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 //components
 import SearchForm from "../../components/SearchForm/SearchForm"
 
 //services
 import { getSpells } from "../../services/api-calls"
+
+import './SpellSearch.css'
 
 const SpellSearch = () => {
 
@@ -37,11 +40,14 @@ const SpellSearch = () => {
                 <h2>Please search for a spell.</h2>}
             {searchResults.map(spell => 
                 <div key={spell._id} className="link-container">
-                    {spell.name}
+                    <Link to={`/spells/${spell._id}`}> 
+                    {spell.name} 
+                    </Link>
                 </div>
             )}
         </main>
-      )
-}
+        )}
+
+
  
 export default SpellSearch

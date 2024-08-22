@@ -3,7 +3,7 @@ import './InventoryList.css'
 const InventoryList = (props) => {
     return ( <div className="inventory-list">
         <h2 className="inventory-title">
-            Inventory List
+            {props.title}
         </h2>
         <ul className="inventory-items">
             {props.inventory.map(item => 

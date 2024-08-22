@@ -1,50 +1,39 @@
-main {
+@keyframes gradientFlow {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .monster-list {
     background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background-size: 300% 300%;
+    animation: gradientFlow 15s linear infinite;
     color: #fff;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.3);
     font-family: 'Garamond', serif;
-    min-height: 100vh;
   }
   
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  }
   
-  .shop-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-  }
   
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .inventory-list {
-    background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    border-radius: 15px;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.3);
-  }
-  
-  .inventory-title {
+  .monster-title {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   }
   
-  .inventory-items {
-    margin: 0;
+  .monster-items {
+    list-style: none;
     padding: 0;
+    margin: 0;
   }
   
-  .inventory-item {
+  .monster-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +46,7 @@ main {
     color: #fff;
   }
   
-  .item-cost {
+  .item-detail {
     color: #ffdf70;
   }
   
@@ -70,23 +59,23 @@ main {
     transition: background-color 0.3s, box-shadow 0.3s;
   }
   
-  .add-button {
+  .view-button {
     background: #4caf50;
     color: #fff;
   }
   
-  .remove-button {
-    background: #f44336;
+  .edit-button {
+    background: #ff9800;
     color: #fff;
   }
   
-  .add-button:hover {
+  .view-button:hover {
     background: #45a049;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
-  .remove-button:hover {
-    background: #e53935;
+  .edit-button:hover {
+    background: #e68a00;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   

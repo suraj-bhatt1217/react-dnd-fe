@@ -32,8 +32,10 @@ const Shop = () => {
                <InventoryList 
                 inventory = {shopInventory} 
                 handleAddItem = {handleAddItem}
+                title = 'Shop Inventory'
                />
                <InventoryList 
+               title = 'User Inventory'
                 inventory = {userInventory}
                 handleRemoveItem = {handleRemoveItem} 
                />

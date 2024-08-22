@@ -1,0 +1,20 @@
+@keyframes gradientFlow {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .monster-details {
+    background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background-size: 300% 300%;
+    animation: gradientFlow 15s linear infinite;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.3);
+    font-family: 'Garamond', serif;
+  }
+  

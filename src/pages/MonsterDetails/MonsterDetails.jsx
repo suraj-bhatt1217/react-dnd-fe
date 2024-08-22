@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 // services
 import { getMonster } from "../../services/api-calls";
 
+import './MonsterDetails.css'
+
 const MonsterDetails = () => {
     const [monsterDetails, setMonsterDetails] = useState({});
     const { monsterId } = useParams();
