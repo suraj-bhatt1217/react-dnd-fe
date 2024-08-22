@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import './NavBar.css'
 
 // assets
-import reactLogo from '../../assets/react.svg'
+import dndLogo from '../../assets/dnd.jpeg'
 
 const NavBar = () => {
     return ( 
         <header className="navbar" style={{ height: '100px' }}>
-            <img src={reactLogo} alt="The React logo" className="logo" />
+            <img src={dndLogo} alt="The React logo" className="logo" />
             <nav className="nav-links">
                 <Link to='/shop'>Shop</Link>
                 <Link to='/monsters'>Scary Monsters</Link>
