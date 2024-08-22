@@ -1,24 +1,32 @@
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.2rem 0.8rem;
     background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* z-index: 1000; Ensure it stays above other content */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width */
+    overflow: hidden; /* Prevent content from overflowing */
 }
 
 .logo {
-    height: 4rem;
+    height: 0.4rem;
     transition: transform 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .nav-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
 }
 
 .nav-links a {
@@ -37,4 +45,26 @@
 .nav-links a.active {
     color: #56ccf2;
     font-weight: bold;
+}
+
+/* Ensure content below the navbar does not overlap */
+body {
+    margin: 0;
+    padding-top: 1rem; /* Ensure this matches the NavBar height */
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    min-height: 10vh; /* Adjust based on the height of the navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        justify-content: center; /* Center links on smaller screens */
+    }
 }

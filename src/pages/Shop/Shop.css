@@ -9,6 +9,10 @@
     min-width: 450px;
 }
 
-.shop-section > h2 {
+.shop-section > h1 {
     align-items: center;
+}
+
+main > h1 {
+    margin-top: 150px;
 }
