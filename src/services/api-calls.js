@@ -10,6 +10,11 @@ export const getMonster = async (monsterId) => {
     return res.json()
 }
 
+export const getSpells = async () => {
+    const res = await fetch(`${baseUrl}/api/spells`)
+    return res.json()
+}
+
 // export {
 //     getMonsterList
 // }
