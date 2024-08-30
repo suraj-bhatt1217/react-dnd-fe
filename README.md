@@ -27,6 +27,7 @@ An engaging front-end application built with React and Vite, featuring a shop fo
 ![GitHub](https://img.shields.io/badge/GitHub-9.3.0-black?style=flat-square&logo=github)
 ![Markdown](https://img.shields.io/badge/Markdown-3.0.1-000000?style=flat-square&logo=markdown) 
 ![Postman](https://img.shields.io/badge/Postman-10.15.0-blue?style=flat-square&logo=postman)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a6a883d-5d00-4162-9381-1500ece8a839/deploy-status)](https://app.netlify.com/sites/mysticdungeon/deploys)
 
 
 ## 📷 Preview
