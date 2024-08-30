@@ -9,7 +9,7 @@ An engaging front-end application built with React and Vite, featuring a shop fo
 - **Responsive Design:** Adapts well to various screen sizes.
 
 ## 🛠️ Project Link
-### Click **[here](https://example.com)** to access the project (replace with actual link).
+### Click **[here](https://mysticdungeon.netlify.app/)** to access the project.
 
 ## 🚀 How to Use
 1. **Explore the Shop:** View and manage magical items in the shop.
