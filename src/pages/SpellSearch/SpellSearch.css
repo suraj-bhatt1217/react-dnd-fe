@@ -15,24 +15,38 @@
 
 .search-form-container {
     margin-bottom: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .search-form {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .search-form input[type="text"] {
+    flex: 1;
+    min-width: 200px;
     padding: 10px;
     border: 2px solid #ffdf70;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.search-form input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .search-form button {
+    flex-shrink: 0;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -42,10 +56,39 @@
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .search-form button:hover {
     background: #f3c300;
+}
+
+.results-container {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-header {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-header h2 {
+    margin: 0.5rem 0;
+}
+
+.empty-state {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.spells-list {
+    min-height: 400px;
+    flex: 1;
 }
 
 .link-container {
@@ -55,6 +98,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .link-container a {
@@ -67,4 +115,11 @@
 
 .link-container a:hover {
     color: #f3c300;
+}
+
+.spell-count {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem 0;
+    text-align: center;
 }

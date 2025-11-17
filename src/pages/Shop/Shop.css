@@ -15,78 +15,20 @@ main {
   }
   
   .shop-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .shop-section > * {
+    width: 100%;
   }
   
   ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .inventory-list {
-    background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    border-radius: 15px;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.3);
-  }
-  
-  .inventory-title {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  }
-  
-  .inventory-items {
     margin: 0;
-    padding: 0;
-  }
-  
-  .inventory-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  .item-name {
-    font-size: 1.2rem;
-    color: #fff;
-  }
-  
-  .item-cost {
-    color: #ffdf70;
-  }
-  
-  .item-button {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  
-  .add-button {
-    background: #4caf50;
-    color: #fff;
-  }
-  
-  .remove-button {
-    background: #f44336;
-    color: #fff;
-  }
-  
-  .add-button:hover {
-    background: #45a049;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .remove-button:hover {
-    background: #e53935;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
   }
   

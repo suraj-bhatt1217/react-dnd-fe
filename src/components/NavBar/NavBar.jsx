@@ -9,7 +9,7 @@ import dndLogo from '../../assets/dnd.jpeg'
 
 const NavBar = () => {
     return ( 
-        <header className="navbar" style={{ height: '100px' }}>
+        <header className="navbar">
             <img src={dndLogo} alt="The React logo" className="logo" />
             <nav className="nav-links">
                 <Link to='/shop'>Shop</Link>

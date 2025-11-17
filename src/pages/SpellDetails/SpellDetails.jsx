@@ -30,7 +30,9 @@ const SpellDetails = () => {
             )}
             <p><strong>Range:</strong> {spell.range}</p>
             <p><strong>Components:</strong> {spell.components?.join(', ')}</p>
-            <p><strong>Material:</strong> {spell.material}</p>
+            {spell.material && (
+                <p><strong>Material:</strong> {spell.material}</p>
+            )}
             <p><strong>Ritual:</strong> {spell.ritual ? 'Yes' : 'No'}</p>
             <p><strong>Duration:</strong> {spell.duration}</p>
             <p><strong>Concentration:</strong> {spell.concentration ? 'Yes' : 'No'}</p>
@@ -38,7 +40,7 @@ const SpellDetails = () => {
             <p><strong>Level:</strong> {spell.level}</p>
             <p><strong>School:</strong> {spell.school}</p>
             <p><strong>Classes:</strong> {spell.classes?.join(', ')}</p>
-            {spell.subclasses && (
+            {spell.subclasses && spell.subclasses.length > 0 && (
                 <p><strong>Subclasses:</strong> {spell.subclasses.join(', ')}</p>
             )}
         </main>
