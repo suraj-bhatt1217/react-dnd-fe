@@ -45,8 +45,6 @@ An engaging front-end application built with React and Vite, featuring a shop fo
 *Cast powerful spells from a magical grimoire and harness arcane energy.*
 
 
-## 💡 Acknowledgments
-- [Ben Manley](https://github.com/ManliestBen) for his engaging ed-tech content and sharing helpful resources like [D&D API](https://sei-dnd-api.herokuapp.com) for the monster and spell data.
 
 
 ## 🔮 Future Enhancements
